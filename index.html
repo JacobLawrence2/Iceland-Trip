@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iceland · South Island Explore · June 2026</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --glacier: #7EC8E3;
+    --aurora-green: #4ECDC4;
+    --lava: #E8572A;
+    --moss: #3D6B47;
+    --obsidian: #0D1117;
+    --ash: #1C2430;
+    --fog: #F0EDE8;
+    --sand: #E8D5B7;
+    --ice: #D4EEF7;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--obsidian);
+    color: var(--fog);
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    background-image:
+      linear-gradient(180deg, rgba(13,17,23,0.55) 0%, rgba(13,17,23,0.15) 35%, rgba(13,17,23,0.55) 70%, rgba(13,17,23,0.92) 100%),
+      url('IMG_2218.JPEG');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+  }
+
+  .hero-aurora {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 120% 60% at 30% 20%, rgba(78,205,196,0.18) 0%, transparent 60%),
+                radial-gradient(ellipse 80% 50% at 80% 10%, rgba(126,200,227,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 40% at 60% 40%, rgba(61,107,71,0.15) 0%, transparent 50%);
+    animation: aurora 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes aurora {
+    0% { opacity: 0.7; transform: translateY(0) scaleX(1); }
+    100% { opacity: 1; transform: translateY(-20px) scaleX(1.05); }
+  }
+
+  .hero-landscape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45%;
+  }
+
+  .hero-mountain {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .hero-stars {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(1px 1px at 20% 15%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 8%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 65% 20%, rgba(255,255,255,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 82% 12%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 28%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 5%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 73% 33%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 42%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 88% 45%, rgba(255,255,255,0.6) 0%, transparent 100%);
+  }
+
+  .glacier-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(126,200,227,0.15);
+    border: 1px solid rgba(126,200,227,0.3);
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--glacier);
+    backdrop-filter: blur(10px);
+    margin-bottom: 1.5rem;
+    width: fit-content;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    color: var(--fog);
+    margin: 0 0 1.75rem 0;
+  }
+
+  .hero-title span {
+    color: var(--glacier);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: rgba(240,237,232,0.55);
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: rgba(240,237,232,0.4);
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--sand);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: rgba(240,237,232,0.3);
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 3rem;
+    background: linear-gradient(to bottom, rgba(126,200,227,0.4), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.1); }
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,17,23,0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(126,200,227,0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--glacier);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(240,237,232,0.5);
+    text-decoration: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--glacier);
+    background: rgba(126,200,227,0.08);
+  }
+
+  /* SECTION WRAPPER */
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--glacier);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--fog);
+    line-height: 1.1;
+    margin: 0 0 3rem 0;
+  }
+
+  .section-title em {
+    color: var(--glacier);
+    font-style: italic;
+  }
+
+  /* DETAILS GRID */
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 5rem;
+  }
+
+  .detail-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .detail-card:hover {
+    border-color: rgba(126,200,227,0.25);
+    transform: translateY(-2px);
+  }
+
+  .detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--glacier), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .detail-card:hover::before { opacity: 1; }
+
+  .card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-type {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--glacier);
+    margin-bottom: 0.35rem;
+  }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--fog);
+    margin: 0 0 0.75rem 0;
+  }
+
+  .card-body {
+    font-size: 0.85rem;
+    color: rgba(240,237,232,0.6);
+    line-height: 1.65;
+  }
+
+  .card-body strong {
+    color: var(--sand);
+    font-weight: 500;
+  }
+
+  .card-body a {
+    color: var(--glacier);
+    text-decoration: none;
+  }
+
+  /* TIMELINE / ITINERARY */
+  .timeline {
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--glacier), rgba(126,200,227,0.1));
+  }
+
+  .day-card {
+    position: relative;
+    margin-left: 5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.025);
+    transition: border-color 0.3s;
+  }
+
+  .day-card:hover { border-color: rgba(126,200,227,0.2); }
+
+  .day-dot {
+    position: absolute;
+    left: -3.75rem;
+    top: 1.6rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: var(--obsidian);
+    border: 2px solid var(--glacier);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .day-dot-inner {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--glacier);
+    transition: transform 0.3s;
+  }
+
+  .day-card.open .day-dot-inner {
+    background: var(--lava);
+    transform: scale(1.3);
+  }
+
+  .day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .day-header-left { display: flex; flex-direction: column; gap: 0.3rem; }
+
+  .day-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--glacier);
+  }
+
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--fog);
+    margin: 0;
+  }
+
+  .day-date {
+    font-size: 0.8rem;
+    color: rgba(240,237,232,0.4);
+    font-family: 'Space Mono', monospace;
+  }
+
+  .day-toggle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgba(126,200,227,0.08);
+    border: 1px solid rgba(126,200,227,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--glacier);
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+
+  .day-card.open .day-toggle {
+    background: rgba(126,200,227,0.15);
+    transform: rotate(180deg);
+  }
+
+  .day-body {
+    display: none;
+    padding: 0 1.5rem 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .day-card.open .day-body { display: block; }
+
+  /* ACTIVITY LIST */
+  .activity-section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(240,237,232,0.35);
+    margin: 1.25rem 0 0.75rem;
+  }
+
+  .activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.5rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.2s;
+  }
+
+  .activity-item:hover { background: rgba(126,200,227,0.05); }
+
+  .activity-icon {
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .activity-name {
+    font-size: 0.875rem;
+    color: rgba(240,237,232,0.85);
+    line-height: 1.4;
+  }
+
+  .activity-note {
+    font-size: 0.75rem;
+    color: rgba(240,237,232,0.4);
+    font-style: italic;
+  }
+
+  /* DINING CHIPS */
+  .dining-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .dining-chip {
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    border: 1px solid rgba(232,213,183,0.2);
+    color: var(--sand);
+    background: rgba(232,213,183,0.05);
+  }
+
+  .dining-chip.featured {
+    border-color: rgba(78,205,196,0.35);
+    color: var(--aurora-green);
+    background: rgba(78,205,196,0.07);
+  }
+
+  /* LODGING STRIP */
+  .lodging-strip {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: rgba(126,200,227,0.06);
+    border: 1px solid rgba(126,200,227,0.15);
+    border-radius: 0.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .lodging-icon { font-size: 1.1rem; }
+
+  .lodging-info { flex: 1; }
+  .lodging-name { font-size: 0.85rem; color: var(--fog); font-weight: 500; }
+  .lodging-addr { font-size: 0.75rem; color: rgba(240,237,232,0.4); }
+
+  .lodging-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--glacier);
+    background: rgba(126,200,227,0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  /* ESSENTIALS */
+  .essentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .essential-item {
+    padding: 1.25rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 0.75rem;
+  }
+
+  .essential-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(240,237,232,0.35);
+    margin-bottom: 0.4rem;
+  }
+
+  .essential-value {
+    font-size: 0.9rem;
+    color: var(--fog);
+  }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: rgba(240,237,232,0.2);
+    text-transform: uppercase;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .timeline::before { left: 1rem; }
+    .day-card { margin-left: 3rem; }
+    .day-dot { left: -2.25rem; }
+    .hero-stats { gap: 1.25rem; }
+  }
+
+  /* WEATHER SECTION */
+  .weather-section {
+    background: rgba(126,200,227,0.03);
+    border-top: 1px solid rgba(126,200,227,0.08);
+    border-bottom: 1px solid rgba(126,200,227,0.08);
+  }
+
+  .weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .weather-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+  }
+
+  .weather-card:hover {
+    border-color: rgba(126,200,227,0.25);
+    transform: translateY(-2px);
+  }
+
+  .weather-card-header {
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .weather-day-info { flex: 1; }
+
+  .weather-day-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--glacier);
+    margin-bottom: 0.2rem;
+  }
+
+  .weather-day-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--fog);
+    margin: 0;
+  }
+
+  .weather-location-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    color: rgba(240,237,232,0.4);
+    background: rgba(255,255,255,0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .weather-icon-wrap {
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .weather-card-body {
+    padding: 1rem 1.25rem 1.25rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem 1.25rem;
+    align-items: center;
+  }
+
+  .weather-temps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weather-high {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--fog);
+    line-height: 1;
+  }
+
+  .weather-low {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(240,237,232,0.4);
+    margin-top: 0.1rem;
+  }
+
+  .weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .weather-detail-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(240,237,232,0.65);
+  }
+
+  .weather-detail-row span:first-child {
+    font-size: 0.85rem;
+    width: 1.2rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .weather-bar-wrap {
+    grid-column: 1 / -1;
+    margin-top: 0.25rem;
+  }
+
+  .weather-bar-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(240,237,232,0.3);
+    margin-bottom: 0.35rem;
+  }
+
+  .weather-bar-track {
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .weather-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--glacier), var(--aurora-green));
+    transition: width 0.6s ease;
+  }
+
+  .weather-condition-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.65rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+
+  .weather-disclaimer {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    background: rgba(126,200,227,0.05);
+    border: 1px solid rgba(126,200,227,0.12);
+    border-radius: 0.75rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .weather-disclaimer-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+  .weather-disclaimer-text {
+    font-size: 0.82rem;
+    color: rgba(240,237,232,0.55);
+    line-height: 1.6;
+  }
+
+  .weather-disclaimer-text a {
+    color: var(--glacier);
+    text-decoration: none;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up { animation: fadeUp 0.7s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.22s; }
+  .delay-3 { animation-delay: 0.36s; }
+  .delay-4 { animation-delay: 0.5s; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div style="position:relative; z-index:10;">
+    <div class="glacier-badge fade-up">
+      <span>●</span> Iceland · South Island
+    </div>
+    <h1 class="hero-title fade-up delay-1">
+      Ísland<br><span>Explore</span>
+    </h1>
+    <p class="hero-sub fade-up delay-2">June 15 – June 21, 2026 &nbsp;·&nbsp; 7 Days &nbsp;·&nbsp; Ring Road South</p>
+    <div class="hero-stats fade-up delay-3">
+      <div class="stat-item">
+        <span class="stat-label">Base</span>
+        <span class="stat-value">Reykjavík</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Nights</span>
+        <span class="stat-value">6 nights</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Hotels</span>
+        <span class="stat-value">3 stays</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Currency</span>
+        <span class="stat-value">ISK (Króna)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="nav">
+  <span class="nav-logo">Iceland &#39;26</span>
+  <div class="nav-links">
+    <a href="#details" class="nav-link">Details</a>
+    <a href="#weather" class="nav-link">Weather</a>
+    <a href="#itinerary" class="nav-link">Itinerary</a>
+    <a href="#essentials" class="nav-link">Essentials</a>
+  </div>
+</nav>
+
+<!-- DETAILS -->
+<section id="details" class="section">
+  <p class="section-label">Trip Overview</p>
+  <h2 class="section-title">Lodging &amp; <em>Key Info</em></h2>
+
+  <div class="details-grid">
+
+    <div class="detail-card">
+      <div class="card-icon">🏙️</div>
+      <div class="card-type">Hotel · Nights 1–2 &amp; Final</div>
+      <h3 class="card-title">Canopy by Hilton Reykjavík</h3>
+      <div class="card-body">
+        <strong>Address:</strong> Smiðjustígur 4, 101 Reykjavík<br>
+        <strong>Check-in:</strong> Mon Jun 15 (and Sun Jun 21)<br>
+        <strong>Check-out:</strong> Wed Jun 17 (and Mon Jun 22)<br><br>
+        Booked via Booking.com — keep confirmation handy.
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="card-icon">🌊</div>
+      <div class="card-type">Apartment · Nights 3–4</div>
+      <h3 class="card-title">Hella Riverbank Apartment</h3>
+      <div class="card-body">
+        <strong>Address:</strong> 850 Hella, Iceland<br>
+        <strong>Check-in:</strong> Wed Jun 17<br>
+        <strong>Check-out:</strong> Fri Jun 19<br><br>
+        Hella is 94 km east of Reykjavík on Route 1. Base for waterfalls &amp; glaciers day.
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="card-icon">🧊</div>
+      <div class="card-type">Hotel · Nights 5–6</div>
+      <h3 class="card-title">Hótel Jökulsárlón</h3>
+      <div class="card-body">
+        <strong>Address:</strong> Reynivellir, Efribær, 781 Suðursveit<br>
+        <strong>Check-in:</strong> Fri Jun 19<br>
+        <strong>Check-out:</strong> Sun Jun 21<br><br>
+        Glacier Lagoon Hotel — prime position for Diamond Beach &amp; Jökulsárlón boat tours.
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="card-icon">💰</div>
+      <div class="card-type">Money</div>
+      <h3 class="card-title">Currency &amp; Costs</h3>
+      <div class="card-body">
+        <strong>Currency:</strong> Icelandic Króna (ISK)<br>
+        <strong>Rate:</strong> ~$1 USD ≈ 138 ISK<br>
+        <strong>Cards:</strong> Widely accepted everywhere<br>
+        <strong>Cash:</strong> Rarely needed — still carry some<br>
+        <strong>Tip:</strong> Tipping not customary in Iceland<br><br>
+        Budget: food ~5,000–10,000 ISK/meal; Blue Lagoon ~12,000 ISK.
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="card-icon">🚗</div>
+      <div class="card-type">Transport</div>
+      <h3 class="card-title">Getting Around</h3>
+      <div class="card-body">
+        <strong>Route:</strong> Ring Road (Route 1) — South<br>
+        <strong>Total driving:</strong> ~350+ mi over 6 days<br>
+        <strong>Roads:</strong> Paved ring road; some F-roads require 4WD<br>
+        <strong>Gas:</strong> Fill up at every opportunity in remote areas<br>
+        <strong>Speed:</strong> 90 km/h on paved, 80 on gravel
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="card-icon">🆘</div>
+      <div class="card-type">Emergency &amp; Safety</div>
+      <h3 class="card-title">Important Contacts</h3>
+      <div class="card-body">
+        <strong>Emergency:</strong> 112<br>
+        <strong>Police non-emergency:</strong> 444-1000<br>
+        <strong>US Embassy Reykjavík:</strong> +354-595-2200<br>
+        <strong>Safe Travel Iceland:</strong> <a href="https://safetravel.is">safetravel.is</a><br>
+        <strong>Weather:</strong> <a href="https://en.vedur.is">vedur.is</a><br><br>
+        Register your trip at safetravel.is before heading to remote areas.
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="card-icon">🌤️</div>
+      <div class="card-type">Climate · June</div>
+      <h3 class="card-title">What to Expect</h3>
+      <div class="card-body">
+        <strong>Temp:</strong> 8–14°C (46–57°F) avg<br>
+        <strong>Daylight:</strong> ~22–24 hrs — Midnight Sun!<br>
+        <strong>Layers:</strong> Pack waterproof jacket always<br>
+        <strong>Wind:</strong> Strong coastal gusts; bring windbreaker<br>
+        <strong>Packing:</strong> Sunglasses + sleep mask essential<br>
+        <strong>Tip:</strong> Weather changes fast — always check vedur.is
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="card-icon">📋</div>
+      <div class="card-type">Booked Activities</div>
+      <h3 class="card-title">Pre-Booked Tours</h3>
+      <div class="card-body">
+        <strong>Blue Lagoon</strong> — Mon Jun 15 (book time slot)<br>
+        <strong>Katla Ice Cave</strong> — Thu Jun 18 (booked tour)<br>
+        <strong>Ice Lagoon Zodiac Boats</strong> — Fri Jun 19<br><br>
+        ⚠️ Book in advance — especially Blue Lagoon and ice cave tours; they sell out.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WEATHER -->
+<section id="weather" class="weather-section">
+  <div class="section">
+    <p class="section-label">June Climate · Historical Averages</p>
+    <h2 class="section-title">Daily <em>Weather</em></h2>
+
+    <div class="weather-grid">
+
+      <!-- DAY 1 — Reykjavík / Reykjanes Peninsula -->
+      <div class="weather-card">
+        <div class="weather-card-header">
+          <div class="weather-day-info">
+            <div class="weather-day-num">Day 01 · Mon Jun 15</div>
+            <h3 class="weather-day-date">Reykjavík &amp; Reykjanes</h3>
+          </div>
+          <span class="weather-location-tag">SW Iceland</span>
+        </div>
+        <div class="weather-card-body">
+          <div class="weather-icon-wrap">⛅</div>
+          <div class="weather-temps">
+            <span class="weather-high">55°F</span>
+            <span class="weather-low">Low ~46°F</span>
+          </div>
+          <div class="weather-details">
+            <div class="weather-detail-row"><span>🌧️</span><span>Rain chance ~35% · showers possible</span></div>
+            <div class="weather-detail-row"><span>💨</span><span>Wind 15–25 mph · gusty coastal</span></div>
+            <div class="weather-detail-row"><span>☀️</span><span>~22 hrs daylight · Midnight Sun</span></div>
+            <div class="weather-detail-row"><span>👕</span><span>Waterproof jacket + mid-layer</span></div>
+          </div>
+          <div class="weather-bar-wrap">
+            <div class="weather-bar-label">Precipitation likelihood</div>
+            <div class="weather-bar-track"><div class="weather-bar-fill" style="width:35%"></div></div>
+          </div>
+        </div>
+        <div style="padding: 0 1.25rem 1rem;">
+          <span class="weather-condition-pill" style="background:rgba(126,200,227,0.08);color:var(--glacier);">⛅ Partly Cloudy</span>
+          <div style="font-size:0.75rem;color:rgba(240,237,232,0.35);margin-top:0.5rem;">Blue Lagoon: outdoor temps warmed by geothermal water — bring a poncho for Blue Lagoon entry walk</div>
+        </div>
+      </div>
+
+      <!-- DAY 2 — Golden Circle -->
+      <div class="weather-card">
+        <div class="weather-card-header">
+          <div class="weather-day-info">
+            <div class="weather-day-num">Day 02 · Tue Jun 16</div>
+            <h3 class="weather-day-date">Golden Circle</h3>
+          </div>
+          <span class="weather-location-tag">South Highlands</span>
+        </div>
+        <div class="weather-card-body">
+          <div class="weather-icon-wrap">🌦️</div>
+          <div class="weather-temps">
+            <span class="weather-high">54°F</span>
+            <span class="weather-low">Low ~44°F</span>
+          </div>
+          <div class="weather-details">
+            <div class="weather-detail-row"><span>🌧️</span><span>Rain chance ~40% · changeable</span></div>
+            <div class="weather-detail-row"><span>💨</span><span>Wind 10–20 mph · calmer inland</span></div>
+            <div class="weather-detail-row"><span>☀️</span><span>~22 hrs daylight · Midnight Sun</span></div>
+            <div class="weather-detail-row"><span>👕</span><span>Waterproof shell + warm base layer</span></div>
+          </div>
+          <div class="weather-bar-wrap">
+            <div class="weather-bar-label">Precipitation likelihood</div>
+            <div class="weather-bar-track"><div class="weather-bar-fill" style="width:40%"></div></div>
+          </div>
+        </div>
+        <div style="padding: 0 1.25rem 1rem;">
+          <span class="weather-condition-pill" style="background:rgba(78,205,196,0.08);color:var(--aurora-green);">🌦️ Mixed Showers</span>
+          <div style="font-size:0.75rem;color:rgba(240,237,232,0.35);margin-top:0.5rem;">Iceland's interior can be cooler than coast. Geysir and Gullfoss are very exposed — wind chill will feel colder.</div>
+        </div>
+      </div>
+
+      <!-- DAY 3 — Drive to Hella -->
+      <div class="weather-card">
+        <div class="weather-card-header">
+          <div class="weather-day-info">
+            <div class="weather-day-num">Day 03 · Wed Jun 17</div>
+            <h3 class="weather-day-date">Drive to Hella</h3>
+          </div>
+          <span class="weather-location-tag">South Iceland</span>
+        </div>
+        <div class="weather-card-body">
+          <div class="weather-icon-wrap">🌤️</div>
+          <div class="weather-temps">
+            <span class="weather-high">57°F</span>
+            <span class="weather-low">Low ~47°F</span>
+          </div>
+          <div class="weather-details">
+            <div class="weather-detail-row"><span>🌧️</span><span>Rain chance ~30% · improving</span></div>
+            <div class="weather-detail-row"><span>💨</span><span>Wind 10–18 mph · moderate</span></div>
+            <div class="weather-detail-row"><span>☀️</span><span>~22 hrs daylight · Midnight Sun</span></div>
+            <div class="weather-detail-row"><span>👕</span><span>Fleece + waterproof outer layer</span></div>
+          </div>
+          <div class="weather-bar-wrap">
+            <div class="weather-bar-label">Precipitation likelihood</div>
+            <div class="weather-bar-track"><div class="weather-bar-fill" style="width:30%"></div></div>
+          </div>
+        </div>
+        <div style="padding: 0 1.25rem 1rem;">
+          <span class="weather-condition-pill" style="background:rgba(232,213,183,0.08);color:var(--sand);">🌤️ Partly Sunny</span>
+          <div style="font-size:0.75rem;color:rgba(240,237,232,0.35);margin-top:0.5rem;">South coast is warmer than Reykjavík in June. Reykjadalur hot river hike — steam valley means mist and moisture even on clear days.</div>
+        </div>
+      </div>
+
+      <!-- DAY 4 — Hella / South Coast Waterfalls -->
+      <div class="weather-card">
+        <div class="weather-card-header">
+          <div class="weather-day-info">
+            <div class="weather-day-num">Day 04 · Thu Jun 18</div>
+            <h3 class="weather-day-date">Waterfalls &amp; Katla</h3>
+          </div>
+          <span class="weather-location-tag">South Coast · Hella</span>
+        </div>
+        <div class="weather-card-body">
+          <div class="weather-icon-wrap">🌧️</div>
+          <div class="weather-temps">
+            <span class="weather-high">55°F</span>
+            <span class="weather-low">Low ~46°F</span>
+          </div>
+          <div class="weather-details">
+            <div class="weather-detail-row"><span>🌧️</span><span>Rain chance ~50% · south coast wet</span></div>
+            <div class="weather-detail-row"><span>💨</span><span>Wind 20–30 mph · strong near cliffs</span></div>
+            <div class="weather-detail-row"><span>☀️</span><span>~22 hrs daylight · Midnight Sun</span></div>
+            <div class="weather-detail-row"><span>👕</span><span>Full waterproof kit — expect to get wet!</span></div>
+          </div>
+          <div class="weather-bar-wrap">
+            <div class="weather-bar-label">Precipitation likelihood</div>
+            <div class="weather-bar-track"><div class="weather-bar-fill" style="width:50%"></div></div>
+          </div>
+        </div>
+        <div style="padding: 0 1.25rem 1rem;">
+          <span class="weather-condition-pill" style="background:rgba(232,87,42,0.1);color:#E8A07A;">🌧️ Likely Rain</span>
+          <div style="font-size:0.75rem;color:rgba(240,237,232,0.35);margin-top:0.5rem;">Seljalandsfoss walk-behind is always wet regardless of weather — waterproof trousers essential. Katla Ice Cave is naturally 0°C inside year-round.</div>
+        </div>
+      </div>
+
+      <!-- DAY 5 — Vík to Glacier Lagoon -->
+      <div class="weather-card">
+        <div class="weather-card-header">
+          <div class="weather-day-info">
+            <div class="weather-day-num">Day 05 · Fri Jun 19</div>
+            <h3 class="weather-day-date">Vík → Glacier Lagoon</h3>
+          </div>
+          <span class="weather-location-tag">Vík · SE Iceland</span>
+        </div>
+        <div class="weather-card-body">
+          <div class="weather-icon-wrap">⛅</div>
+          <div class="weather-temps">
+            <span class="weather-high">53°F</span>
+            <span class="weather-low">Low ~44°F</span>
+          </div>
+          <div class="weather-details">
+            <div class="weather-detail-row"><span>🌧️</span><span>Rain chance ~35% · coastal gusts</span></div>
+            <div class="weather-detail-row"><span>💨</span><span>Wind 20–35 mph · Reynisfjara exposed</span></div>
+            <div class="weather-detail-row"><span>☀️</span><span>~22 hrs daylight · Midnight Sun</span></div>
+            <div class="weather-detail-row"><span>👕</span><span>Wind-resistant outer layer critical</span></div>
+          </div>
+          <div class="weather-bar-wrap">
+            <div class="weather-bar-label">Precipitation likelihood</div>
+            <div class="weather-bar-track"><div class="weather-bar-fill" style="width:35%"></div></div>
+          </div>
+        </div>
+        <div style="padding: 0 1.25rem 1rem;">
+          <span class="weather-condition-pill" style="background:rgba(126,200,227,0.08);color:var(--glacier);">⛅ Partly Cloudy</span>
+          <div style="font-size:0.75rem;color:rgba(240,237,232,0.35);margin-top:0.5rem;">Vík is one of Iceland's wettest spots. Reynisfjara beach is extremely windy. Glacier Lagoon area is calmer but cold — Zodiac tours provided dry suits.</div>
+        </div>
+      </div>
+
+      <!-- DAY 6 — Glacier Lagoon Area -->
+      <div class="weather-card">
+        <div class="weather-card-header">
+          <div class="weather-day-info">
+            <div class="weather-day-num">Day 06 · Sat Jun 20</div>
+            <h3 class="weather-day-date">Glacier Lagoon &amp; Höfn</h3>
+          </div>
+          <span class="weather-location-tag">SE Iceland · Vatnajökull</span>
+        </div>
+        <div class="weather-card-body">
+          <div class="weather-icon-wrap">🌤️</div>
+          <div class="weather-temps">
+            <span class="weather-high">52°F</span>
+            <span class="weather-low">Low ~43°F</span>
+          </div>
+          <div class="weather-details">
+            <div class="weather-detail-row"><span>🌧️</span><span>Rain chance ~30% · drier SE coast</span></div>
+            <div class="weather-detail-row"><span>💨</span><span>Wind 10–20 mph · glacier chill factor</span></div>
+            <div class="weather-detail-row"><span>☀️</span><span>~22 hrs daylight · Midnight Sun</span></div>
+            <div class="weather-detail-row"><span>👕</span><span>Warmest layers — glacier cools ambient air</span></div>
+          </div>
+          <div class="weather-bar-wrap">
+            <div class="weather-bar-label">Precipitation likelihood</div>
+            <div class="weather-bar-track"><div class="weather-bar-fill" style="width:30%"></div></div>
+          </div>
+        </div>
+        <div style="padding: 0 1.25rem 1rem;">
+          <span class="weather-condition-pill" style="background:rgba(232,213,183,0.08);color:var(--sand);">🌤️ Partly Sunny</span>
+          <div style="font-size:0.75rem;color:rgba(240,237,232,0.35);margin-top:0.5rem;">SE Iceland is in Vatnajökull's rain shadow — often drier than south coast. Stokksnes looks best in overcast light for dramatic mountain photos.</div>
+        </div>
+      </div>
+
+      <!-- DAY 7 — Drive back to Reykjavík -->
+      <div class="weather-card">
+        <div class="weather-card-header">
+          <div class="weather-day-info">
+            <div class="weather-day-num">Day 07 · Sun Jun 21</div>
+            <h3 class="weather-day-date">Drive Back to Reykjavík</h3>
+          </div>
+          <span class="weather-location-tag">West Iceland · Reykjavík</span>
+        </div>
+        <div class="weather-card-body">
+          <div class="weather-icon-wrap">⛅</div>
+          <div class="weather-temps">
+            <span class="weather-high">56°F</span>
+            <span class="weather-low">Low ~47°F</span>
+          </div>
+          <div class="weather-details">
+            <div class="weather-detail-row"><span>🌧️</span><span>Rain chance ~30% · typical June</span></div>
+            <div class="weather-detail-row"><span>💨</span><span>Wind 10–20 mph · variable</span></div>
+            <div class="weather-detail-row"><span>☀️</span><span>~22 hrs daylight · Summer Solstice!</span></div>
+            <div class="weather-detail-row"><span>👕</span><span>Light layers — warmer near coast</span></div>
+          </div>
+          <div class="weather-bar-wrap">
+            <div class="weather-bar-label">Precipitation likelihood</div>
+            <div class="weather-bar-track"><div class="weather-bar-fill" style="width:30%"></div></div>
+          </div>
+        </div>
+        <div style="padding: 0 1.25rem 1rem;">
+          <span class="weather-condition-pill" style="background:rgba(78,205,196,0.1);color:var(--aurora-green);">🌞 Summer Solstice!</span>
+          <div style="font-size:0.75rem;color:rgba(240,237,232,0.35);margin-top:0.5rem;">June 21 is the Summer Solstice — the longest day of the year. Glymur Waterfall trail is best in good visibility. Hvammsvik hot springs are magical in evening light.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="weather-disclaimer">
+      <span class="weather-disclaimer-icon">🛰️</span>
+      <div class="weather-disclaimer-text">
+        <strong style="color:var(--glacier);">These are historical June averages</strong>, not live forecasts — your trip is too far out for real-time data. Check <a href="https://en.vedur.is" target="_blank">vedur.is</a> (Icelandic Met Office) starting ~7 days before departure for accurate daily forecasts. Iceland's weather is notoriously changeable — the saying goes "if you don't like the weather, wait 15 minutes." Always layer up and carry waterproof gear regardless of the forecast.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section id="itinerary" style="background: rgba(255,255,255,0.015); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+  <div class="section">
+    <p class="section-label">Day by Day</p>
+    <h2 class="section-title">Full <em>Itinerary</em></h2>
+
+    <div class="timeline">
+
+      <!-- DAY 1 -->
+      <div class="day-card" id="day1">
+        <div class="day-dot"><div class="day-dot-inner"></div></div>
+        <div class="day-header" onclick="toggleDay('day1')">
+          <div class="day-header-left">
+            <span class="day-number">Day 01</span>
+            <h3 class="day-title">Arrive — Blue Lagoon &amp; Reykjavík</h3>
+            <span class="day-date">Monday, June 15</span>
+          </div>
+          <div class="day-toggle">▼</div>
+        </div>
+        <div class="day-body">
+          <p class="activity-section-label">🗺 Activities</p>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-icon">♨️</span><div><div class="activity-name">Blue Lagoon</div><div class="activity-note">Pre-book your time slot — fills up fast. 11 min from Reykjavík.</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🍽️</span><div><div class="activity-name">Lava Restaurant</div><div class="activity-note">Inside Blue Lagoon complex</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🌋</span><div><div class="activity-name">Gunnuhver Hot Springs</div><div class="activity-note">Active geothermal area on Reykjanes Peninsula</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🌍</span><div><div class="activity-name">Bridge Between Continents</div><div class="activity-note">Walkway linking North American &amp; Eurasian tectonic plates</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🌋</span><div><div class="activity-name">Fagradalsfjall Volcano</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💨</span><div><div class="activity-name">Seltún Geothermal Area</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🕳️</span><div><div class="activity-name">Leiðarendi Lava Cave</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🏛️</span><div><div class="activity-name">Reykjavík City Explore</div><div class="activity-note">Tjörnin Lake · Austurvöllur · Hallgrímskirkja · Harpa · Laugavegur · Perlan</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🛳️</span><div><div class="activity-name">Sun Voyager Sculpture</div><div class="activity-note">Iconic stainless-steel boat sculpture along the seafront</div></div></div>
+          </div>
+          <p class="activity-section-label">🍴 Dinner Options</p>
+          <div class="dining-grid">
+            <span class="dining-chip featured">Fiskmarkaðurinn (splurge)</span>
+            <span class="dining-chip">Saegreifinn (budget)</span>
+            <span class="dining-chip">Flatey Pizza</span>
+            <span class="dining-chip featured">Íslenski Barinn 4.7★</span>
+            <span class="dining-chip">Bryggjan Brugghús</span>
+            <span class="dining-chip">Reykjavik Street Food</span>
+            <span class="dining-chip">KROST 4.7★</span>
+          </div>
+          <div class="lodging-strip">
+            <span class="lodging-icon">🏨</span>
+            <div class="lodging-info">
+              <div class="lodging-name">Canopy by Hilton Reykjavík City Centre</div>
+              <div class="lodging-addr">Smiðjustígur 4, 101 Reykjavík</div>
+            </div>
+            <span class="lodging-badge">Check-in</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-card" id="day2">
+        <div class="day-dot"><div class="day-dot-inner"></div></div>
+        <div class="day-header" onclick="toggleDay('day2')">
+          <div class="day-header-left">
+            <span class="day-number">Day 02</span>
+            <h3 class="day-title">Golden Circle</h3>
+            <span class="day-date">Tuesday, June 16</span>
+          </div>
+          <div class="day-toggle">▼</div>
+        </div>
+        <div class="day-body">
+          <p class="activity-section-label">☕ Breakfast in Reykjavík</p>
+          <div class="dining-grid">
+            <span class="dining-chip featured">Braud &amp; Co.</span>
+            <span class="dining-chip">Reykjavik Roasters</span>
+            <span class="dining-chip">Café Rosenberg</span>
+          </div>
+          <p class="activity-section-label">🗺 Golden Circle Route</p>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-icon">🌊</span><div><div class="activity-name">Kerið Crater Lake</div><div class="activity-note">Volcanic crater formed ~4,000 BC — vivid blue lake inside</div></div></div>
+            <div class="activity-item"><span class="activity-icon">⛪</span><div><div class="activity-name">Skálholt Cathedral</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🏊</span><div><div class="activity-name">Laugarás Lagoon</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🍅</span><div><div class="activity-name">Friðheimar Greenhouse Restaurant</div><div class="activity-note">Tomato-based dishes from onsite greenhouses · Open 11:30AM–4PM</div></div></div>
+            <div class="activity-item"><span class="activity-icon">♨️</span><div><div class="activity-name">Secret Lagoon (Flúðir)</div><div class="activity-note">Created 1891 — Iceland's oldest geothermal pool · Open 10AM–7PM</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Hrunalaug Hot Spring</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🌊</span><div><div class="activity-name">Gullfoss Falls</div><div class="activity-note">Iconic double-cascade on the Hvítá River</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💥</span><div><div class="activity-name">Geysir</div><div class="activity-note">Active geothermal field — Strokkur erupts every 5–10 min</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🔵</span><div><div class="activity-name">Brúarfoss</div><div class="activity-note">Remote, brilliantly blue-colored waterfall series</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🐄</span><div><div class="activity-name">Efstidalur II Farm</div><div class="activity-note">Great ice cream stop + farm stay restaurant</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🏔️</span><div><div class="activity-name">Þingvellir National Park</div><div class="activity-note">UNESCO site — rift valley, Öxarárfoss waterfall, Silfra fissure</div></div></div>
+          </div>
+          <p class="activity-section-label">🍴 Lunch Options</p>
+          <div class="dining-grid">
+            <span class="dining-chip featured">Farmer's Bistro (Flúðir) 4.7★</span>
+            <span class="dining-chip">Gullfoss Panorama Restaurant</span>
+          </div>
+          <div class="lodging-strip">
+            <span class="lodging-icon">🏨</span>
+            <div class="lodging-info">
+              <div class="lodging-name">Canopy by Hilton Reykjavík City Centre</div>
+              <div class="lodging-addr">Return to Reykjavík for night 2</div>
+            </div>
+            <span class="lodging-badge">Night 2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-card" id="day3">
+        <div class="day-dot"><div class="day-dot-inner"></div></div>
+        <div class="day-header" onclick="toggleDay('day3')">
+          <div class="day-header-left">
+            <span class="day-number">Day 03</span>
+            <h3 class="day-title">Drive to Hella</h3>
+            <span class="day-date">Wednesday, June 17</span>
+          </div>
+          <div class="day-toggle">▼</div>
+        </div>
+        <div class="day-body">
+          <p class="activity-section-label">🗺 En Route Stops</p>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-icon">🕳️</span><div><div class="activity-name">Raufarhólshellir Lava Tunnel</div><div class="activity-note">Guided tour only · Natural ice sculptures · Open 9AM–5PM</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🌊</span><div><div class="activity-name">Reykjadalur Hot Spring Thermal River</div><div class="activity-note">Hike up the valley to a swimable hot river</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🏘️</span><div><div class="activity-name">Hveragerði Town</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🏙️</span><div><div class="activity-name">Selfoss New Old Town</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Hjálparfoss</div><div class="activity-note">Picturesque twin cascades near lava fields of Mt. Hekla</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🌿</span><div><div class="activity-name">Gjáin Valley</div><div class="activity-note">Tranquil valley — waterfalls, ponds, lava rocks, volcano views</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Háifoss Waterfall</div><div class="activity-note">Dramatic remote waterfall near a volcano</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🗿</span><div><div class="activity-name">Caves of Hella</div></div></div>
+          </div>
+          <p class="activity-section-label">🍴 Dinner in Hella</p>
+          <div class="dining-grid">
+            <span class="dining-chip featured">Hekla Street Food 4.9★</span>
+            <span class="dining-chip">Lava '47 (pizza)</span>
+            <span class="dining-chip">Kanslarinn Gastropub</span>
+            <span class="dining-chip">Stracta Bistro</span>
+          </div>
+          <div class="lodging-strip">
+            <span class="lodging-icon">🏠</span>
+            <div class="lodging-info">
+              <div class="lodging-name">Hella Riverbank Apartment</div>
+              <div class="lodging-addr">850 Hella, Iceland</div>
+            </div>
+            <span class="lodging-badge">Check-in</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 4 -->
+      <div class="day-card" id="day4">
+        <div class="day-dot"><div class="day-dot-inner"></div></div>
+        <div class="day-header" onclick="toggleDay('day4')">
+          <div class="day-header-left">
+            <span class="day-number">Day 04</span>
+            <h3 class="day-title">Waterfalls &amp; Ice Cave</h3>
+            <span class="day-date">Thursday, June 18</span>
+          </div>
+          <div class="day-toggle">▼</div>
+        </div>
+        <div class="day-body">
+          <p class="activity-section-label">🗺 Hella Area — South Coast</p>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-icon">💦</span><div><div class="activity-name">Seljalandsfoss</div><div class="activity-note">Walk behind the 200-ft waterfall — bring waterproof gear!</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💦</span><div><div class="activity-name">Gljúfrabúi (Hidden Waterfall)</div><div class="activity-note">Nearly hidden in a narrow canyon adjacent to Seljalandsfoss</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🥾</span><div><div class="activity-name">Fimmvörðuháls Trail Area</div><div class="activity-note">22km pass between glaciers with 25 waterfalls</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Skógafoss</div><div class="activity-note">60m-tall waterfall — climb the stairs for top views</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Kvernufoss</div><div class="activity-note">Thundering falls behind moss-covered cliffs — less crowded!</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🧊</span><div><div class="activity-name">Katla Ice Cave ⭐ BOOKED</div><div class="activity-note">Guided tour inside a glacier — one of the highlights of the trip!</div></div></div>
+          </div>
+          <p class="activity-section-label">🍴 Lunch</p>
+          <div class="dining-grid">
+            <span class="dining-chip">Gamla Fjosid</span>
+            <span class="dining-chip">Systrakaffi</span>
+            <span class="dining-chip">Strondin Pub</span>
+            <span class="dining-chip">Restaurant Sudur-Vik</span>
+          </div>
+          <p class="activity-section-label">🍴 Dinner</p>
+          <div class="dining-grid">
+            <span class="dining-chip featured">Midgard Restaurant 4.9★</span>
+            <span class="dining-chip featured">Hygge Restaurant 4.8★</span>
+            <span class="dining-chip">Eldstó Art Café 4.7★</span>
+            <span class="dining-chip">Valhalla (Viking theme)</span>
+          </div>
+          <div class="lodging-strip">
+            <span class="lodging-icon">🏠</span>
+            <div class="lodging-info">
+              <div class="lodging-name">Hella Riverbank Apartment</div>
+              <div class="lodging-addr">850 Hella, Iceland</div>
+            </div>
+            <span class="lodging-badge">Night 4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 5 -->
+      <div class="day-card" id="day5">
+        <div class="day-dot"><div class="day-dot-inner"></div></div>
+        <div class="day-header" onclick="toggleDay('day5')">
+          <div class="day-header-left">
+            <span class="day-number">Day 05</span>
+            <h3 class="day-title">Drive to Glacier Lagoon</h3>
+            <span class="day-date">Friday, June 19</span>
+          </div>
+          <div class="day-toggle">▼</div>
+        </div>
+        <div class="day-body">
+          <p class="activity-section-label">🗺 Coastal Drive — Vík to Jökulsárlón</p>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-icon">⛪</span><div><div class="activity-name">Vík í Mýrdal Church</div><div class="activity-note">Hilltop church with panoramic ocean views</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🌊</span><div><div class="activity-name">Reynisfjara Black Sand Beach</div><div class="activity-note">Basalt columns, Reynisdrangar sea stacks — stay back from the waves!</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🏔️</span><div><div class="activity-name">Dyrhólaey Peninsula</div><div class="activity-note">Lighthouse + massive volcanic rock arch — great puffin spotting in June!</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🌿</span><div><div class="activity-name">Eldhraun Lava Field</div><div class="activity-note">Vast moss-covered lava from 1780s eruption</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🏞️</span><div><div class="activity-name">Fjaðrárgljúfur Canyon</div><div class="activity-note">2-million-year-old winding river canyon · walking path available</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🚤</span><div><div class="activity-name">Ice Lagoon Zodiac Boat Tours</div><div class="activity-note">Weave through icebergs in the glacier lagoon — surreal!</div></div></div>
+          </div>
+          <p class="activity-section-label">🍴 Dinner near Glacier Lagoon</p>
+          <div class="dining-grid">
+            <span class="dining-chip featured">Hótel Jökulsárlón Restaurant 4.8★</span>
+            <span class="dining-chip">Fosshotel Glacier Lagoon 4.5★</span>
+            <span class="dining-chip">Fjallsárlón Frost Restaurant</span>
+            <span class="dining-chip">Hali Country Hotel</span>
+          </div>
+          <div class="lodging-strip">
+            <span class="lodging-icon">🧊</span>
+            <div class="lodging-info">
+              <div class="lodging-name">Hótel Jökulsárlón — Glacier Lagoon Hotel</div>
+              <div class="lodging-addr">Reynivellir, 781 Suðursveit</div>
+            </div>
+            <span class="lodging-badge">Check-in</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 6 -->
+      <div class="day-card" id="day6">
+        <div class="day-dot"><div class="day-dot-inner"></div></div>
+        <div class="day-header" onclick="toggleDay('day6')">
+          <div class="day-header-left">
+            <span class="day-number">Day 06</span>
+            <h3 class="day-title">Glacier Lagoon Explore</h3>
+            <span class="day-date">Saturday, June 20</span>
+          </div>
+          <div class="day-toggle">▼</div>
+        </div>
+        <div class="day-body">
+          <p class="activity-section-label">🗺 Vatnajökull &amp; East Iceland</p>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Svartifoss Waterfall</div><div class="activity-note">20m fall framed by dramatic hexagonal basalt columns — iconic</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🏔️</span><div><div class="activity-name">Skaftafell National Park</div><div class="activity-note">Hiking trails through glaciers and volcanoes</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Hundafoss</div></div></div>
+            <div class="activity-item"><span class="activity-icon">⛏️</span><div><div class="activity-name">Diamond Beach</div><div class="activity-note">Glistening iceberg fragments on a black sand beach — don't miss sunrise/sunset!</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🧊</span><div><div class="activity-name">Jökulsárlón Glacier Lagoon</div><div class="activity-note">Walk the shore, watch icebergs calve and drift — otherworldly</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🚢</span><div><div class="activity-name">Fjallsárlón Glacier Lagoon</div><div class="activity-note">Quieter lagoon with boat tours — often less crowded than Jökulsárlón</div></div></div>
+            <div class="activity-item"><span class="activity-icon">📸</span><div><div class="activity-name">Stokksnes Mirror Beach ⭐ HIGHLY RECOMMENDED</div><div class="activity-note">Dramatic Vestrahorn mountain backdrop — best photo location in Iceland</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🎣</span><div><div class="activity-name">Höfn Town</div><div class="activity-note">Fishing town with views of Vatnajökull — Íshúsið Pizzeria if hungry</div></div></div>
+          </div>
+          <div class="lodging-strip">
+            <span class="lodging-icon">🧊</span>
+            <div class="lodging-info">
+              <div class="lodging-name">Hótel Jökulsárlón — Glacier Lagoon Hotel</div>
+              <div class="lodging-addr">Enjoy the midnight sun from the hotel!</div>
+            </div>
+            <span class="lodging-badge">Night 6</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 7 -->
+      <div class="day-card" id="day7">
+        <div class="day-dot"><div class="day-dot-inner"></div></div>
+        <div class="day-header" onclick="toggleDay('day7')">
+          <div class="day-header-left">
+            <span class="day-number">Day 07</span>
+            <h3 class="day-title">Drive Back to Reykjavík</h3>
+            <span class="day-date">Sunday, June 21</span>
+          </div>
+          <div class="day-toggle">▼</div>
+        </div>
+        <div class="day-body">
+          <p class="activity-section-label">🗺 Return Route Stops</p>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Glymur Waterfall</div><div class="activity-note">Iceland's 2nd highest waterfall — rugged trail, log river crossing</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🎬</span><div><div class="activity-name">Þórufoss</div><div class="activity-note">18m falls — filming location for Game of Thrones!</div></div></div>
+            <div class="activity-item"><span class="activity-icon">♨️</span><div><div class="activity-name">Hvammsvik Hot Springs</div><div class="activity-note">Geothermal pools right on the fjord</div></div></div>
+            <div class="activity-item"><span class="activity-icon">💧</span><div><div class="activity-name">Helgufoss</div></div></div>
+            <div class="activity-item"><span class="activity-icon">🍽️</span><div><div class="activity-name">Reykjavík Kitchen</div><div class="activity-note">Great spot for a final Icelandic meal before check-in</div></div></div>
+          </div>
+          <div class="lodging-strip">
+            <span class="lodging-icon">🏨</span>
+            <div class="lodging-info">
+              <div class="lodging-name">Canopy by Hilton Reykjavík City Centre</div>
+              <div class="lodging-addr">Check out Mon Jun 22 — safe travels!</div>
+            </div>
+            <span class="lodging-badge">Final Night</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ESSENTIALS -->
+<section id="essentials" class="section">
+  <p class="section-label">Pack Smart</p>
+  <h2 class="section-title">Travel <em>Essentials</em></h2>
+
+  <div class="essentials-grid">
+    <div class="essential-item">
+      <div class="essential-label">Language</div>
+      <div class="essential-value">Icelandic · English widely spoken</div>
+    </div>
+    <div class="essential-item">
+      <div class="essential-label">Plug Type</div>
+      <div class="essential-value">Type F (European) — 230V</div>
+    </div>
+    <div class="essential-item">
+      <div class="essential-label">Time Zone</div>
+      <div class="essential-value">GMT+0 (no DST in Iceland)</div>
+    </div>
+    <div class="essential-item">
+      <div class="essential-label">Driving Side</div>
+      <div class="essential-value">Right side (same as US)</div>
+    </div>
+    <div class="essential-item">
+      <div class="essential-label">Water</div>
+      <div class="essential-value">Tap water safe &amp; delicious</div>
+    </div>
+    <div class="essential-item">
+      <div class="essential-label">Mobile</div>
+      <div class="essential-value">Coverage good on Ring Road · get local SIM or eSIM</div>
+    </div>
+    <div class="essential-item">
+      <div class="essential-label">Speed Limits</div>
+      <div class="essential-value">90 km/h paved · 80 km/h gravel</div>
+    </div>
+    <div class="essential-item">
+      <div class="essential-label">Sunset</div>
+      <div class="essential-value">~11:45 PM — bring a sleep mask!</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(232,87,42,0.08); border: 1px solid rgba(232,87,42,0.2); border-radius: 1rem;">
+    <p style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: #E8572A; margin: 0 0 0.75rem 0;">⚠️ Safety Reminders</p>
+    <div style="font-size: 0.875rem; color: rgba(240,237,232,0.7); line-height: 1.7;">
+      Never turn your back on ocean waves at black sand beaches (sneaker waves are deadly). · Always check weather at vedur.is before heading out. · Register your trip at safetravel.is for remote areas. · Headlights on at all times while driving (required by law). · Stay on marked paths at geothermal areas — boiling ground can crust over.
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  Iceland · South Island Explore · June 15–21, 2026 &nbsp;·&nbsp; Ring Road South &nbsp;·&nbsp; Hlakka ferðalagið! (Safe travels!)
+</footer>
+
+<script>
+  function toggleDay(id) {
+    const card = document.getElementById(id);
+    card.classList.toggle('open');
+  }
+
+  // Open day 1 by default
+  document.getElementById('day1').classList.add('open');
+
+  // Smooth scroll for nav
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
